@@ -90,7 +90,7 @@ Where Passenger Cars vs. Year gives us a very simple look at how the number of c
 
 ![carspercapita_vs_number_of_cars](carspercap_vs_numdot.png)
 Explanation of Choices:
-After graphing number of cars per capita against number of cars, we can see that smaller countries like Bulgaria have jumped to the top of the graph. While initially seeming like a confusing correlation, this could demonstrate the ease for an individual to own more cars in areas with lesser prices. While this feature might be more difficult to obvserve in a meaningful way against other features with machine learning, especially with our rough plan to perform a time series linear regression, it is a good feature to observe now to strengthen our understanding of how features accross our datasets correlate to each other.
+- After graphing number of cars per capita against number of cars, we can see that smaller countries like Bulgaria have jumped to the top of the graph. While initially seeming like a confusing correlation, this could demonstrate the ease for an individual to own more cars in areas with lesser prices. While this feature might be more difficult to obvserve in a meaningful way against other features with machine learning, especially with our rough plan to perform a time series linear regression, it is a good feature to observe now to strengthen our understanding of how features accross our datasets correlate to each other.
 
 ![carspercapita_vs_number_of_cars_zoom](carspercap_vs_numcarszoom.png)
 Explanation of Choices:
