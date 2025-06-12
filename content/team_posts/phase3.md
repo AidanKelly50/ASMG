@@ -40,7 +40,7 @@ When saying "Tourism Numbers", we are referring to the Number of Trips taken to 
 ## Challenges When Building Model
 After we started building the model, we encountered initial challenges like merging our two datafiles from MySQL, cleaning the data in ways like standardizing all features through min/max normalization, and going through trial and error to find the best way to mathematically calculate which five countries best suited the preferences of our user. Initially, we tried an idea with calculating the distance between the user's input and each country's vector, but ended up shifting our approach to cosine similarity as we learned in class for a cleaner, directional implementation. This required restructuring a few functions, but we ultimately accomplished building a model that gives our user recommendations based on their inputs, then connected the top five countries to be displayed on a density plotly express map. The user is then redirected to a page with their recommended countries, with the darkest countries being the most similar, and the lighter countries being less similar. Ultimately, working on the model was a great experience to not only implement what we learned in class, but to learn more about how to better work as a team to consider what would work best for our models.
 
-## REST API Matrix
+## Streamlit App Functionality
 ![Ellie Landing Page](ellielandingpage.png)
 - When signed in as Ellie, this is the landing page that it will take you to
 
@@ -74,7 +74,7 @@ Like this.
 ![ML model working](ml-model.png)
 -Here the recommendation ML model has output the top 5 countries that best fit the users input. The countries are highlighted on the map (darker being more likely to match the users desires and lighter being less likely). They are also listed at the bottom.
 
-## Streamlit App Functionality
+## REST API Matrix
 
 1. POST Request for Researcher
 When the user is signed in as the researcher and is on the create posts page, they have the ability to create a post with a title and body text. When the user presses submit, a streamlit form will send the data as JSON through the POST request that is embeded in the submit button. This POST request will add the text and the post content to the mySQL database and will store it for the user to view on the view posts page
@@ -92,13 +92,21 @@ When the user is signed in as the researcher and is on the view posts page, if t
 When the user is signed in as the traveler and is on the where to travel page, they are able to input their desired level values for travel time, cost, and tourism population. Since this is wrapped in a Streamlit Form, when the user submits, the values from the sliderbar are placed into the GET request to the API and those values from the request are used as the values to generate a ranking (from the recommendation ML model) of the top 5 countries that match the users input. The recommendation ML model rankings are then used to highlight on a map the top 5 countries.
 
 6. Another GET Request for Traveler 
-When then is signed in as the traveler and is on the view travel data page, a GET request to the API will get the data from the mySQL table that is relevent to the country they are traveling in (via a dropdown selection) and it will display the data.
+When the user is signed in as the traveler and is on the view travel data page, a GET request to the API will get the data from the mySQL table that is relevent to the country they are traveling in (via a dropdown selection) and it will display the data.
 
 7. GET Request for Tourism Director
 This endpoint uses time series modeling to forecast future tourism trends and visitor numbers. The predictions help tourism officials make strategic planning decisions and allocate resources effectively.
 
 
-## REST API Matrix
-![API Matrix Chart](Matrix.png)
+### Tourist API Resources
+![Tourist Requests](touristRequests.png)
+</br>
+
+### Researcher API Resources
+![posts Requests](postsRequests.png)
+</br>
+
+### Tourism Director API Resources
+![official Requests](official.png)
 
 
