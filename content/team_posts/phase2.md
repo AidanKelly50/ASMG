@@ -74,8 +74,9 @@ Use the cusor to zoom in/out or use the plus and minus sign (in order to see all
 Here is the link the to code of the Inital MySQL DDL model <br> [Link to mySQL DDL Code ](https://drive.google.com/file/d/1dUJhlQq0w4GWwUo47a5TZEtMl-E3PAmh/view?usp=sharing)
 
 
-## Passenger Cars Present in Europe Over Time - Data Visualizations
+## Data Visualizations & Reasoning
 
+### Passenger Cars Data
 {{< iframe src="cars_vs_year.html" width="150%" height="600" >}}
 
 - The Passenger Cars data file provides extremely in-depth features, like type of motor engery and size of engine. By taking advantage of the ability to include all motor energies and engine sizes into a category called "Total", this allows for a more holistic analysis of these features and how they interact with time. The most prominent and simple interaction between features to observe in this case would be how the number of passenger cars increases with time. By choosing to implement a line graph with number of cars along the y-axis and years along the x-axis, it is easy to see how the number of cars has steadily increased across time. Observing this trend is not only important for supporting our inferences, but important with regards to coinciding with our user personas' goals dealing with gaining a general understanding of how number of passenger cars and year interact with each other. On a planning basis, it allows us to develop insights for how possible machine learning models might handle certain choices for features. 
@@ -87,20 +88,25 @@ Here is the link the to code of the Inital MySQL DDL model <br> [Link to mySQL D
 - This new feature was created by merging a dataframe from another file with details about GDP spending by country, and dividing number of passenger cars by the GDP for the corresponding country. Using this new feature in a line graph allows us to see how a country's GDP directly affects how passenger cars changes with time. 
 
 {{< iframe src="carspercap_vs_year.html" width="150%" height="600" >}}
-Explanation of Choices:
+
 - After graphing number of cars per capita against number of cars, we can see that smaller countries like Bulgaria have jumped to the top of the graph. While initially seeming like a confusing correlation, this could demonstrate the ease for an individual to own more cars in areas with lesser prices. While this feature might be more difficult to obvserve in a meaningful way against other features with machine learning, especially with our rough plan to perform a time series linear regression, it is a good feature to observe now to strengthen our understanding of how features accross our datasets correlate to each other.
 - Following the same idea with the number of cars vs. year graphs, we chose to make this scatterplot interactive in order to observe the strong trends that were difficult to observe due to higher countries on the plot. By removing the top few countries, the initially small trends that appear at the bright blue datapoints suddenly become much easier to see. Ultimatley, this is a method that both tests how we want users to interact with the visualizations to create a more personalized experience as well as being able to understand trends we are seeing. Without having a solid foundation of knowledge for how features can correlate to each other, it makes it more difficult for us to forsee how it would align with our users' goals.
 
-## Reasoning For Data Visualization
+### Number of Trips (Tourism) Data
 
 ### Road Density Data
-![road density picture](road_density.png)
-We chose a funnel chart to represent the road density across countries because of how visually intuitive it is. The chart arranges countries from those with the least dense road networks at the top to the most dense at the bottom. This layout helps highlight major differences at a glance. For someone planning a trip, this type of chart can offer a quick way to spot which countries might have more congested road systems, potentially influencing travel choices.
+{{< iframe src="road_density.html" width="150%" height="600" >}}
+
+- We chose a funnel chart to represent the road density across countries because of how visually intuitive it is. The chart arranges countries from those with the least dense road networks at the top to the most dense at the bottom. This layout helps highlight major differences at a glance. For someone planning a trip, this type of chart can offer a quick way to spot which countries might have more congested road systems, potentially influencing travel choices.
 
 ### GDP and Road Spending Data 
-![gdp vs road spending graph](GDP_vs_Road_Spending_per_country.png)
-Since the dataset included several key variables, we thought an interactive scatter plot would be the clearest way to break it down. On the x-axis, we placed each country’s GDP, while the y-axis shows how much they spend on their roads. We also sized the dots based on GDP, which makes it easier to visually compare the countries. To help viewers follow along, each country is shown in a different color, allowing patterns and outliers to stand out more clearly as they move the bar at the bottom signaling the years.
+{{< iframe src="gdp_vs_roadspending.html" width="150%" height="600" >}}
+
+- Since the dataset included several key variables, we thought an interactive scatter plot would be the clearest way to break it down. On the x-axis, we placed each country’s GDP, while the y-axis shows how much they spend on their roads. We also sized the dots based on GDP, which makes it easier to visually compare the countries. To help viewers follow along, each country is shown in a different color and size depending on their GDP and roadspending, allowing patterns and outliers to stand out more clearly.
+- These visualization features an interactive aspect, where the user can use the slider along the bottom to animate the changes in GDP and roadspending as the years move forward. This allows for a seamless and fun way to keep the user engaged with hands-on learning with a model that might be initially difficult to understand due to all the colors, sizes, and features in play.
 
 ### Country Priotization of Travel and Tourism Data 
-![Country Priotization of Travel and Tourism](Country_Priotization_of_Travel_and_Tourism_Score_(1-7).png)
-Our goal with this dataset was to make it easy to compare how each country’s prioritization of travel and tourism has changed over time. To do that, we used a bar chart with the prioritization scores (on a scale from 1 to 7) along the x-axis and the country names listed on the y-axis. Each year is represented by a different color within the bars, so viewers can quickly spot changes and trends. This kind of visual is especially useful for travelers who want to understand which countries are putting more emphasis on supporting tourism.
+{{< iframe src="tourism_priority.html" width="150%" height="600" >}}
+
+- Our goal with this dataset was to make it easy to compare how each country’s prioritization of travel and tourism has changed over time. To do that, we used a bar chart with the prioritization scores (on a scale from 1 to 7) along the x-axis and the country names listed on the y-axis. Each year is represented by a different color within the bars, so viewers can quickly spot changes and trends. This kind of visual is especially useful for travelers who want to understand which countries are putting more emphasis on supporting tourism.
+- Users can toggle on and off the years in order to get a look at two different years in comparison with each other, or even view a single year of their choice.
