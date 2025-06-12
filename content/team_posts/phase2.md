@@ -13,6 +13,8 @@ authors:
 showAuthorsBadges: false
 ---
 
+## (Updated 6/15/25)
+
 # Updates to Phase One
 Through the duration of Phase two our team realized that with our initial design, users would all be using the app in a very similar way that made each persona seem irrelevant to how they were interacting with the data. Understanding this, we decided to pivot our idea to surround European tourism. Specifically we were focusing on creating an data driven european tourism app in which each user would interact with the app uniquely. With this new app, we had to also rethink our personas as how they would interact with this new app was different than our old personas. These new personas are similar to the other ones but their goals and wants that the app must satisfy differs to the older personas. 
 
@@ -93,6 +95,16 @@ Here is the link the to code of the Inital MySQL DDL model <br> [Link to mySQL D
 - Following the same idea with the number of cars vs. year graphs, we chose to make this scatterplot interactive in order to observe the strong trends that were difficult to observe due to higher countries on the plot. By removing the top few countries, the initially small trends that appear at the bright blue datapoints suddenly become much easier to see. Ultimatley, this is a method that both tests how we want users to interact with the visualizations to create a more personalized experience as well as being able to understand trends we are seeing. Without having a solid foundation of knowledge for how features can correlate to each other, it makes it more difficult for us to forsee how it would align with our users' goals.
 
 ### Number of Trips (Tourism) Data
+{{< iframe src="trips_per_year.html" width="150%" height="600" >}}
+
+- Adding in the Tourism Data was a little difficult considering how the data contained duplicate data for every year, leading to a longer and more hands-on process being required for for cleaning. Each visualization has been filtered to contain trips under the personal leisure category that last for 1 or more nights. By doing so, we thought this would allow us to capture the most accurate number of tourism trips for the most amount of nights in order to ensure the largest data pool for tourism possible.
+- We started by observing the simple and more obvious features of number of tourism trips versus year. By first understanding this trend, it allows us to see if there is an observable correlation that could be useful for one of our machine learning models, like our early idea for a time series linear regression that could be used by our National Director of Tourism to increase their economic benefits from tourist trips in each country.
+- This graph also features an interactive element, with the user being able to toggle on and off lines in order to better oberseve what is happening beneath a few higher-scale trends near the top of the graph.
+
+{{< iframe src="trips_top_three.html" width="150%" height="600" >}}
+
+- Since including every country on the simple line graph appeared to have overcluttered some possible trends, we decided to look at the relationship between just the top three countries in tourism to see just how much their magnitude differs from the other countries in this dataset. We filtered the data to return a list of the top three countries to make sure we had the right idea, and then created a new visualization for these.
+- With the countries being Spain, France, and Germany, we decided a clean, stacked bar chart would be the most effective way to view these tourist superpowers alongside each other in a visually appealing manner. Users can toggle between which countries they would like to view, and although this visualization might not prove very useful in the final product of the application, it allows for a deeper inferential analysis of exactly how much tourism is influenced by other factors like population, size, and GDP.
 
 ### Road Density Data
 {{< iframe src="road_density.html" width="150%" height="600" >}}
