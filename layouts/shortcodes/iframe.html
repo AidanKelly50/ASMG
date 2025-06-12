@@ -1,7 +1,7 @@
 <iframe
-  src= "{{ .Site.BaseURL }}{{ .Get "src" }}"
-  width="{{ .Get 'width' | default '100%' }}"
-  height="{{ .Get 'height' | default '400' }}"
+  src="{{ .Site.BaseURL }}{{ .Get "src" }}"
+  width="{{ .Get "width" | default "100%" }}"
+  height="{{ .Get "height" | default "400" }}"
   frameborder="0"
   allowfullscreen
   loading="lazy">
