@@ -107,6 +107,6 @@ This endpoint uses time series modeling to forecast future tourism trends and vi
 </br>
 
 ### Tourism Director API Resources
-![official Requests](official.png)
+![official Requests](officalRequests.png)
 
 
