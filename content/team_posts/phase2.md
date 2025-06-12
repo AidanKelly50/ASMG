@@ -77,7 +77,7 @@ Here is the link the to code of the Inital MySQL DDL model <br> [Link to mySQL D
 ## Passenger Cars Present in Europe Over Time - Data Visualizations
 
 {{< iframe src="cars_vs_year.html" width="100%" height="600" >}}
-
+yippee!
 The Passenger Cars data file provides extremely in-depth features, like type of motor engery and size of engine. By taking advantage of the ability to include all motor energies and engine sizes into a category called "Total", this allows for a more holistic analysis of these features and how they interact with time. The most prominent and simple interaction between features to observe in this case would be how the number of passenger cars increases with time. By choosing to implement a line graph with number of cars along the y-axis and years along the x-axis, it is easy to see how the number of cars has steadily increased across time. Observing this trend is not only important for supporting our inferences, but important with regards to coinciding with our user personas' goals dealing with gaining a general understanding of how number of passenger cars and year interact with each other. On a planning basis, it allows us to develop insights for how possible machine learning models might handle certain choices for features.
 
 
