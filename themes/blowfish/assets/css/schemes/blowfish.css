@@ -1,53 +1,19 @@
 :root {
   --color-neutral: 255, 255, 255;
-  
-  /* White/Gray Neutrals */
-  --color-neutral-50: 255, 255, 255;     /* Pure white */
-  --color-neutral-100: 249, 250, 251;    /* Off white */
-  --color-neutral-200: 243, 244, 246;    /* Very light gray */
-  --color-neutral-300: 229, 231, 235;    /* Light gray */
-  --color-neutral-400: 156, 163, 175;    /* Medium gray */
-  --color-neutral-500: 107, 114, 128;    /* Gray */
-  --color-neutral-600: 75, 85, 99;       /* Dark gray */
-  --color-neutral-700: 55, 65, 81;       /* Darker gray */
-  --color-neutral-800: 31, 41, 55;       /* Very dark gray */
-  --color-neutral-900: 17, 24, 39;       /* Almost black */
-  
-  /* Primary Blue (#0891B2) */
-  --color-primary-50: 240, 249, 255;     /* Very light blue */
-  --color-primary-100: 224, 242, 254;    /* Light blue */
-  --color-primary-200: 186, 230, 253;    /* Lighter blue */
-  --color-primary-300: 125, 211, 252;    /* Light blue */
-  --color-primary-400: 56, 189, 248;     /* Medium light blue */
-  --color-primary-500: 8, 145, 178;      /* Main blue #0891B2 */
-  --color-primary-600: 7, 130, 160;      /* Darker blue */
-  --color-primary-700: 6, 115, 142;      /* Dark blue */
-  --color-primary-800: 5, 100, 124;      /* Darker blue */
-  --color-primary-900: 4, 85, 106;       /* Very dark blue */
-  
-  /* Secondary Sage Green (#C1D5C0) */
-  --color-secondary-50: 248, 252, 248;   /* Very light sage */
-  --color-secondary-100: 240, 248, 240;  /* Light sage */
-  --color-secondary-200: 232, 244, 231;  /* Lighter sage */
-  --color-secondary-300: 215, 236, 214;  /* Light sage */
-  --color-secondary-400: 193, 213, 192;  /* Main sage #C1D5C0 */
-  --color-secondary-500: 171, 190, 170;  /* Medium sage */
-  --color-secondary-600: 149, 167, 148;  /* Darker sage */
-  --color-secondary-700: 127, 144, 126;  /* Dark sage */
-  --color-secondary-800: 105, 121, 104;  /* Darker sage */
-  --color-secondary-900: 83, 98, 82;     /* Very dark sage */
+  --color-primary-50: 240, 249, 255; /* Very light blue */
+  --color-primary-500: 8, 145, 178; /* Darker blue (#0891B2) */
+  --color-secondary-50: 248, 252, 248; /* Very light sage (#C1D5C0) */
 }
 
 .button-primary {
-  background-color: rgb(var(--color-primary-500)); /* #0891B2 */
-  color: rgb(var(--color-neutral-50));             /* White */
+  background-color: rgb(var(--color-primary-500)); /* Darker blue */
+  color: rgb(var(--color-neutral)); /* White text */
 }
 
 .accent-section {
-  background-color: rgb(var(--color-secondary-400)); /* #C1D5C0 */
+  background-color: rgb(var(--color-secondary-50)); /* Light sage */
 }
 
 .text-content {
-  color: rgb(var(--color-neutral-800));              /* Dark gray text */
-  background-color: rgb(var(--color-neutral-50));    /* White background */
+  background-color: rgb(var(--color-neutral)); /* White background */
 }

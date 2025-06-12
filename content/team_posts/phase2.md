@@ -70,7 +70,7 @@ Use the cusor to zoom in/out or use the plus and minus sign (in order to see all
 <br>
 
 ## Inital MySQL DDL Model
-![mySQL DDL inital code](mySQLDDL.png)
+![mySQL DDL inital code](DDLdiagram.png)
 Here is the link the to code of the Inital MySQL DDL model <br> [Link to mySQL DDL Code ](https://drive.google.com/file/d/1dUJhlQq0w4GWwUo47a5TZEtMl-E3PAmh/view?usp=sharing)
 
 
