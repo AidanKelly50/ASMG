@@ -6,16 +6,7 @@ This blog started as a way for us to document our work during the ASMG course. I
 
 Everything on the blog is built with Jekyll and hosted on GitHub Pages. Each post is written in Markdown and lives in the _posts folder.
 
-## Breakdown 
-ASMG/
-├── _posts/        # All blog posts (Markdown)
-├── _layouts/      # Page/post layout templates
-├── _includes/     # Reusable HTML pieces
-├── assets/        # Images, CSS, etc.
-├── index.md       # Landing page
-├── about.md       # About us
-├── _config.yml    # Blog settings
-└── README.md      # This file
+<pre> ## Breakdown ``` ASMG/ ├── _posts/ # Blog posts (Markdown) ├── _layouts/ # Page/post layout templates ├── _includes/ # Reusable HTML pieces ├── assets/ # Images, CSS, etc. ├── index.md # Landing page ├── about.md # About us ├── _config.yml # Blog settings └── README.md # This file ``` </pre>
 
 ## Topics Covered 
 - Data wrangling and cleaning
