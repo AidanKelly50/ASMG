@@ -41,28 +41,28 @@ Our team created wireframes to visualize what we envisioned the app would look l
 This is the base page where all users will see when the application is first opened up. This is the default page and the login screen
 
 2. European Traveler Page 1
-- ![First Page of Traveler Wireframe](TravelerPage1.JPG)
+- ![First Page of Traveler Wireframe](F_Traveler_1.jpeg)
 This is the first feature the user can encounter when signed in as the European Traveler. On this page, users can input their personal preferences such as prioritizing saving money, reducing travel time, or visiting popular destinations and receive a ranked list of countries based on those values
 
 3. European Traveler Page 2
-- ![Second Page of Traveler Wireframe](TravelerPage2.JPG)
-This is the third feature the user can encounter when signed in as the European Traveler. On this page, the user can input the country they are visiting, the start and end date of their trip, and their prefered travel time (day/evening/night) and recieve a traffic prediction (time estimation).
+- ![Second Page of Traveler Wireframe](F_Traveler_2.jpeg)
+This is the second feature the user can encounter when signed in as the European Traveler. On this page, the user can input the country they are visiting and a list of the top 5 attractions for that country will return. 
 
 4. National Director of Tourism Page 1
-- ![First Page of Director Wireframe](DirectorPage1.JPG)
-This is the first feature the user can encounter when signed in as the National Director of Tourism. On this page, the user can select a country, input a start and end date and recieve a double-lined trend chart of tourist numbers and GDP spending in correlation with the years range
+- ![First Page of Director Wireframe](F_Official_1.jpeg)
+This is the first feature the user can encounter when signed in as the Tourism Director. On this page, the user can select a country to compare their country of nationality to. These graphs can then be posted for the researchers to view and conduct their posts upon
 
 5. National Director of Tourism Page 2
-- ![Second Page of Director Wireframe](DirectorPage2.JPG)
-This is the second feature the user can encounter when signed in as the National Director of Tourism. On this page, the user can select from a multi-select box—choosing factors such as fuel prices, traffic levels, or road density. They must also specify a year and set the desired increase or decrease in GDP spending. This input will generate an interactive heat map that visualizes the projected impact of these changes on the country level by color.
+- ![Second Page of Director Wireframe](F_Official_2.jpeg)
+This is the second feature the user can encounter when signed in as the National Director of Tourism. The user can view the data that impacts the future tourism prediction through various graphs. When the user firsts opens this page, only their country of nationality is selected in the model but the user is able to change how many countries they are viewing by clicking the countries on the side.
 
 6. European Tourism Researcher Page 1
-- ![First Page of Researcher Wireframe](ResearcherPage1.JPG)
-This is the first feature the user can encounter when signed in as the European European Tourism Researcher. On this page, the user can select which data they would like to download from the various data sets used on the websites. They can choose if they want all the data, the date range of the data, the country(s) of the data and then can download the data.
+- ![First Page of Researcher Wireframe](F_Researcher_1.jpeg)
+This is the first feature the user can encounter when signed in as the European European Tourism Researcher. On this page, the user can view existing posts from other researchers and they can aslo edit and delete their own posts but not other posts that are not created by them.
 
 7. European Tourism Researcher Page 2
-- ![Second Page of Researcher Wireframe](ResearcherPage2.JPG)
-This is the second feature the user can encounter when signed in as the European European Tourism Researcher. On this page, the user can write notes about the research they are able to conduct on they app and also upload pictures to their note page. The note page will be given an auto generated tag at the top for filtering purposes.
+- ![Second Page of Researcher Wireframe](F_Researcher_2.jpeg)
+This is the second feature the user can encounter when signed in as the European European Tourism Researcher. On this page, the user can create a post for each graph that is displayed (graphs will be displayed when the Official posts them). The user can create a post with a title and a content part.
 
 <br>
 
