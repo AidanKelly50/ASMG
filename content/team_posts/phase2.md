@@ -68,12 +68,12 @@ This is the second feature the user can encounter when signed in as the European
 
 ## Global and Persona ER Models
 <div style="width: 640px; height: 480px; margin: 10px; position: relative;"><iframe allowfullscreen frameborder="0" style="width:640px; height:480px" src="https://lucid.app/documents/embedded/b232c25c-6c0f-44d9-99cc-d8ebb671822c" id="rFzj1BL4b9vs"></iframe></div>
-Use the cusor to zoom in/out or use the plus and minus sign (in order to see all the models). For clearity, the researcher is the same as the Global data model as the researcher can view all the data for a variety of her studies 
+Use the cusor to zoom in/out or use the plus and minus sign (in order to see all the models).
 <br>
 
 ## Inital MySQL DDL Model
-![mySQL DDL inital code](DDLdiagram.png)
-Here is the link the to code of the Inital MySQL DDL model <br> [Link to mySQL DDL Code ](https://drive.google.com/file/d/1dUJhlQq0w4GWwUo47a5TZEtMl-E3PAmh/view?usp=sharing)
+![mySQL DDL inital code](MySQLDDL.png)
+Here is the link the to code of the Inital MySQL DDL model <br> [Link to mySQL DDL Code ](https://drive.google.com/file/d/1ZFyc5f8cmMpUQ4mWYdywM4zaQxLdK5m2/view?usp=sharing)
 
 
 ## Data Visualizations & Reasoning
