@@ -50,7 +50,7 @@ For the researcher's posts that can be added, changed, and deleted, the Front En
 
 #### Final Model
 
-- ![DDL Picture](MySQLDDL.png)
+- ![DDL Picture](NewMySQLDDL.png)
 
 Our ER Model has 14 entities. They hold the tourism data, road data, researcher posts, shared graphs, and users. They are all connected via Countries, except for ReasearchFindings and GraphFindings.
 
