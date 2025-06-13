@@ -34,6 +34,8 @@ In the near future, it would be interesting to see what the plot would look like
 
 # Software Architecture and Database Model
 
+#### Architecture
+
 The data is stored in a MySQL database. It is accessed by a Flask REST API. The Front End is in Streamlit, and it accesses the backend through the REST API.
 
 The project is run in a Docker container which holds the MySQL database, API, and web app.
@@ -46,3 +48,16 @@ For the supervised model, the Front End calls the API which accesses the already
 
 For the researcher's posts that can be added, changed, and deleted, the Front End calls the API, which accesses the MySQL database to change the contents of the tables.
 
+#### Final Model
+
+- ![DDL Picture](mySQLDDL.png)
+
+Our ER Model has 14 entities. They hold the tourism data, road data, researcher posts, shared graphs, and users. They are all connected via Countries, except for ReasearchFindings and GraphFindings.
+
+This translated to a DDL model with 14 tables.
+
+These tables are accessed using 16 GET routes. The researcher and graph posts can be changed with 2 POST routes, 1 PUT route, and 1 DELETE route:
+
+- ![Tourist Requests](touristRequests.png)
+- ![Official Requests](officalRequests.png)
+- ![Post Requests](postsRequests.png)
