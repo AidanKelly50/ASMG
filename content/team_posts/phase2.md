@@ -36,7 +36,7 @@ The main focus of this phase of the project was to thoughtfully explore potentia
 Our team created wireframes to visualize what we envisioned the app would look like by the end of the development process, based on the available data and the features required to meet user needs and project requirements. Each wireframe page is a page that would be displayed on the app with the user interface displayed
 
 1. Home Page
-- ![Home Page of Wireframe](HomePage.JPG)
+- ![Home Page of Wireframe](Home_Page.JPG)
 <br>
 This is the base page where all users will see when the application is first opened up. This is the default page and the login screen
 
