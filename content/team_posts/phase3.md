@@ -42,38 +42,31 @@ When saying "Tourism Numbers", we are referring to the Number of Trips taken to 
 After we started building the model, we encountered initial challenges like merging our two datafiles from MySQL, cleaning the data in ways like standardizing all features through min/max normalization, and going through trial and error to find the best way to mathematically calculate which five countries best suited the preferences of our user. Min/max normalization was chosen due to its ability to be more flexible and sensitive to outliers, which was more than possible with our data containing varying values that would depend on the country's size and population as well. Initially, we tried an idea with calculating the distance between the user's input and each country's vector, but ended up shifting our approach to cosine similarity as we learned in class for a cleaner, directional implementation. This required restructuring a few functions, but we ultimately accomplished building a model that gives our user recommendations based on their inputs, then connected the top five countries to be displayed on a density plotly express map. The user is then redirected to a page with their recommended countries, with the darkest countries being the most similar, and the lighter countries being less similar. Ultimately, working on the model was a great experience to not only implement what we learned in class, but to learn more about how to better work as a team to consider what would work best for our models.
 
 ## Streamlit App Functionality
-![Ellie Landing Page](ellielandingpage.png)
-- When signed in as Ellie, this is the landing page that it will take you to
+![EuroTour HomePage](EuroTourHomePage.png)
+- When the user first opens the app, they will be able to sign in as 1 of 3 personas. Either the Traveler, the Tourism Director, or the Researcher. Each user displayed is a button that the user can login as and these names are retrived from the Users table in MySQL via a GET request.
 
 </br>
 
-![Ellie Post Request Page](ellieRequest.png)
-- When signed in as Ellie and the user clicks the create post button, this is the page that will show up. The user can input a title and text regarding their research. Then when they are ready, they can sumbit and a POST request will add the input to the ResearchFindings Database in MySQL for the user to view.
+![Official Model One](OfficialModelPage1.png)
+- When signed in as a Tourism Director and viewing the Tourism Prediction Page, the user is able to compare their country that they are from (determined from the Users Nationailty in the Users table of MySQL) and compare it with any other country in the E.U. The graph plots both historical and predicted data of tourism numbers and the prediction comes from the supervised time series model. There is a GET request to view the graph with both countries and this get request pulls from the transactional table that stores the weights of each country. Officials can also post these graphs so the Researchers can view which is a POST request to the GraphFindings table in MySQL.
 
 </br>
 
-![Ellie's Post](elliepost.png)
-- When the user is signed in as Ellie and the user clicks the view posts button, this is the page that they will see. They can open the drop down menu and see the post that they have made. Since this is their post they can also edit it and delete it.
+![View Tourism Factors](ViewTourismFactors.png)
+- When signed in as a Tourism Director and viewing the Tourism Analytics page, the user can view the data that impacts the future tourism prediction through various graphs. When the user firsts opens this page, only their country of nationality is selected in the model but the user is able to change how many countries they are viewing by clicking the countries on the side. This is 4 individual GET requests to the MySQL database for the trips table, road quality, tourism prioritization, and road spending.
 
-![Can't Edit](cantedit.png)
-- Here the user is signed in as Ellie and this means that she can only edit and delete her own posts. If Ellie views other posts by other users, she cannot delete them, as seen by the lack of edit and delete buttons in the other post.
+![Recomender Model ](RecommenderModel.png)
+- When the user is signed in as a Traveler and viewing the where to travel page, they are able to generate the top 5 countries that best fit their input to 3 questions on a scale of 1 to 10. How important is saving money on fuel/travel cost? How much do you value avoiding long travel times/traffic? How important is it to visit high tourism areas? Based on these values, the cosine singularity between the values of the user and the values of each country will be taken via a GET request. Based on this difference, the model will provide the top 5 countries that are closest to 1 based on the values that the user inputted. 
 
-![Editing Post](editingpost.png)
-- Here the user (who is signed in as Ellie) is editing her post. Once the submit button is pressed, it will sent a PUT request to change that row in the database with the new inputed values.
+![Attractions Page](AttractionsPage.png)
+- When the user is signed in as a Traveler and viewing the Attractions page, they are prompted to select a country that they wish to view the attractions. When the Traveler selects a country, a GET reuqest is sent with that country to the MySQL database and retreives all the attractions under that country name. They are then displayed to the user with their specific town/city and also an external website to learn more about the attraction
 
-![Post has been edited](postisedited.png)
-- Here the post that Ellie had made prior has been edited and now her changes be viewed. Her orignal post with her original content has been overiden by the PUT request by the user. If the user presses delete here, a DELETE request will be sent to delete that row from the database ResearchFindings and then that post will not be visable anymore. 
-Like this.
-- ![Post has been deleted](deleted.png)
+![ViewGraphPostsPage](ViewGraphPostsPage.png)
+- When the user is singed in as a Researcher and on the View Graphs page, they are able to see all the graphs that any Tourism Director from any country has posted. This is done via a GET request to the MySQL data base by taking all the rows in the GraphFindings table and displaying them. The Researcher also has the option to create a post about that graph underneath, allowing them to title the post and write a few setances about their findings. When they are ready, they can submit their post and this will trigger a POST request to add the new post to the ResearchFindings table for herself and other Researchers to view.
 
-![Traveler Home](travelerHome.png)
-- Here is the landing page for the traveler after the user has signed in. Here the user can choose to decide where to travel and look at traffic prediction
 
-![Travel Help](travelhelp.png)
-- Here is the page that helps the traveler user plan on where to go. The user is able to slide the slider to the values that best represent their interests. The map at the bottom will highlight the top 5 countries they should plan a trip too based off their input.
-
-![ML model working](ml-model.png)
--Here the recommendation ML model has output the top 5 countries that best fit the users input. The countries are highlighted on the map (darker being more likely to match the users desires and lighter being less likely). They are also listed at the bottom.
+![ViewingAndEditingPosts](ViewingAndEditingPosts.png)
+- When the user is signed in as a Researcher and on the View Posts page, they are able to see all of the other Researcher posts including their own which is done via a GET reuqest to the ResearchFindings Table in MySQL. Researchers are able to edit a post only if they were the ones that created it. As shown here, when logged in as Ellie Willems, the user can edit her own posts but not the posts of others (this is done by comparing st.sessionState UserID with the post Ids) Editing a post is the same format as Posting a new post in terms of the UI but behind the scenes, when the user submits the edit request, it sends a PUT request to edit that row in the Research findings table where that PostID is equal to edited one. Additonally, Researchers can also delete their posts and their posts only which is also done with the session state variable. When the user submits the delete request, that row in the MySQL table in ResearchFindings where the PostID is equal to the deletion will be deleted from the database and no longer able to view.
 
 ## REST API Matrix
 
@@ -93,10 +86,20 @@ When the user is signed in as the researcher and is on the view posts page, if t
 When the user is signed in as the traveler and is on the where to travel page, they are able to input their desired level values for travel time, cost, and tourism population. Since this is wrapped in a Streamlit Form, when the user submits, the values from the sliderbar are placed into the GET request to the API and those values from the request are used as the values to generate a ranking (from the recommendation ML model) of the top 5 countries that match the users input. The recommendation ML model rankings are then used to highlight on a map the top 5 countries.
 
 6. Another GET Request for Traveler 
-When the user is signed in as the traveler and is on the view travel data page, a GET request to the API will get the data from the mySQL table that is relevent to the country they are traveling in (via a dropdown selection) and it will display the data.
+When the user is signed in as the traveler and is on the view tourist attractions page, a GET request to the API will get the data from the mySQL table that is relevent to the country they are traveling in (via a dropdown selection) and it will display all the attractions with the city/town and an external website that will inform the user more of the attraction.
 
 7. GET Request for Tourism Director
-This endpoint uses time series modeling to forecast future tourism trends and visitor numbers. The predictions help tourism officials make strategic planning decisions and allocate resources effectively.
+The Tourism Director has 4 GET request to 4 unique tables in the MySQL database to display them to the user. The GET requests pull the data from the Trips, Road Quality, Road Spending and Trips Prioritization tables for the official to view either their countries data or as many countries as they have selected.
+
+8. Another GET Request for Tourism Director
+The Tourism Director also has a GET request which is given the country the time series model will predict upon and the country of nationality of the user. These two inputs will allow the graph to get two prediction values along with historical values that are being pull from the Trips table. To the user it is displayed as a two distinct colored lines on the graph.
+
+9. POST Request for Tourism Director
+The Tourism Director has a POST request which allows the user to post the comparison graph that they had created via the GET request above. POSTing this graph will then insert the data into the GraphFindings table in MySQL to be retreived for future viewing by the researcher.
+
+10. GET Request for All Personas
+When the user first opens the page, they are prompted to sign in as one of three personas. If the user clicks the dropdown menu, they are allowed to sign in as 5 distinct users which are all retrived via a GET request to all the users of type Traveler, Official or Researcher.
+
 
 
 ### Tourist API Resources
@@ -108,6 +111,6 @@ This endpoint uses time series modeling to forecast future tourism trends and vi
 </br>
 
 ### Tourism Director API Resources
-![official Requests](officalRequests.png)
+![official Requests](OfficialAPINew.png)
 
 
