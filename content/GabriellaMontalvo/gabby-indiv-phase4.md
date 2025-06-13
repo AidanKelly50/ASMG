@@ -3,7 +3,7 @@ title: "Phase 4 Deliverable"
 date: 2025-06-13
 draft: false
 description: "Phase 4 Individual Deliverable - Gabriella Montalvo"
-slug: "phase3deliverable"
+slug: "phase4deliverable"
 tags: ["authors", "config", "docs"]
 authors:
   - "gabbymontalvo"
